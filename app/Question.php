@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Question extends Model
 {
     use SoftDeletes;
+    protected $perPage = 5;
     protected $fillable = ['title','body'];
     public function user()
     {

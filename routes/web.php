@@ -12,9 +12,12 @@
 */
 
 Route::get('/', function () {
+
+//    factory(\App\Question::class,10)->create();
     return view('welcome');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('questions','QuestionsController');
